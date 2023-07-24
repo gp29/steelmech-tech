@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelmech Tech</title>
+    <meta content="Steelmech Tech: Manufacturing Engineering Companies" name="description">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar Start -->
+    <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" width="200px"></a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				<ul class="nav navbar-nav">
+                    <li><a href="index.html" class="navbar-list-name">HOME</a></li>
+                    <li><a href="about-us.html" class="navbar-list-name">ABOUT US</a></li>
+                    <li><a href="vision-mision.html" class="navbar-list-name">VISION MISSION</a></li>
+                    <li><a href="valuable-customer.html" class="navbar-list-name">VALUABLE CUSTOMERS</a></li>
+                    <li><a href="services.html" class="navbar-list-name">SERVICES</a></li>
+                    <li><a href="wecan.html" class="navbar-list-name">WE CAN</a></li>
+                    <li><a href="industries.html" class="navbar-list-name">INDUSTRIES</a></li>
+                    <li><a href="contact.html" class="navbar-list-name">CONTACT US</a></li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+
+    <!-- Navigation Bar End -->
+
+    <div class="banner">
+        <div class="text" style="padding: 20px 0 0 0;">
+            <h1 class="banner-heading">WE CAN</h1>
+            <hr class="line"><br>
+            <p>We can do Heavy Fabrication, Heavy Machining, Blasting and Painting, Customized designed requirements, Material handling equipments and many more. For more details you can contact us</p><br>
+        </div>
+        
+    </div>
+    <div class="our-partners-main">
+        <h1>Our Products</h1>
+        <hr class="heding-line">
+        <div class="our-partners" id="wecan">
+        </div>
+    </div>
+    <!-- <div class="privacy-cookies">Privacy Policy</div> -->
+    	<!-- ....footer start...... -->
+	<div class="footer">
+        <br><br>
+        <div class="part1">
+            <div class="part2">
+                © Copyright 2023 Steelmech Tech. All Rights Reserved
+            </div>
+            <div class="social-icon">
+                <a href="#"><img src="images/facebook.png" alt=""></a>
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <!-- <div class="part2">
+            © Copyright 2023 VectorSmart. All Rights Reserved
+        </div>
+        <br><br> -->
+    </div>
+	<!-- ....footer End...... -->
+</body>
+<script>
+    let val = "";
+    for (let i = 1; i <= 48; i++) {
+        if(i !== 7 && i !== 35){
+            val += '<div class="box"><img class="wecan-img" src="images/wecan/'+i+'.jpg"></div>';
+        }
+    }
+    document.getElementById("wecan").innerHTML = val;
+</script>
+</html>
