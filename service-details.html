@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steelmech Tech</title>
+    <meta content="Steelmech Tech: Manufacturing Engineering Companies" name="description">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar Start -->
+    <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" width="200px"></a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				<ul class="nav navbar-nav">
+                    <li><a href="index.html" class="navbar-list-name">HOME</a></li>
+                    <li><a href="about-us.html" class="navbar-list-name">ABOUT US</a></li>
+                    <li><a href="vision-mision.html" class="navbar-list-name">VISION MISSION</a></li>
+                    <li><a href="valuable-customer.html" class="navbar-list-name">VALUABLE CUSTOMERS</a></li>
+                    <li><a href="services.html" class="navbar-list-name">SERVICES</a></li>
+                    <li><a href="wecan.html" class="navbar-list-name">WE CAN</a></li>
+                    <li><a href="industries.html" class="navbar-list-name">INDUSTRIES</a></li>
+                    <li><a href="contact.html" class="navbar-list-name">CONTACT US</a></li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+
+    <!-- Navigation Bar End -->
+
+    <div class="banner">
+        <div class="text">
+            <h1 class="banner-heading" id="details-header"></h1>
+            <hr class="line"><br>
+            <div id="description"></div>
+        </div>
+    </div>
+    <div class="our-partners-main">
+        <h1>Our Products</h1>
+        <hr class="heding-line">
+        <div class="our-partners" id="products">
+        </div>
+    </div>
+    <!-- <div class="privacy-cookies">Privacy Policy</div> -->
+    	<!-- ....footer start...... -->
+	<div class="footer">
+        <br><br>
+        <div class="part1">
+            <div class="part2">
+                © Copyright 2023 Steelmech Tech. All Rights Reserved
+            </div>
+            <div class="social-icon">
+                <a href="#"><img src="images/facebook.png" alt=""></a>
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <!-- <div class="part2">
+            © Copyright 2023 VectorSmart. All Rights Reserved
+        </div>
+        <br><br> -->
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('type');
+        if(title == 'forging'){
+            document.getElementById("details-header").innerHTML = "Forging";
+            let val = "";
+            val += '<p>Steelmech Tech, utilize a hydraulic press to produce forged circular sections including crane wheels, industrial wheels, sheave wheels, gear blanks, rollers, and other products.</p><p><b>Imported Manipulator 1</b><br>Capacity – 7 Ton<br>Forging Diameter Up to – 1.2 Mtr<br>Forged Shaft Up to 6 Mtr Length</p><p><b>Hammer 1</b><br>Capacity – 7 Ton<br>Type – Steam Hammer<br>Max stroke height – 1200mm</p><p><b>Hammer 2</b><br>Capacity – 0.5 Ton<br>Type – Pneumatic<br>Max stroke height – 500mm</p><p><b>Oil Fired Box Type furnace</b><br>Capacity – 10 Ton<br>No of Furnace – 2<br>Vol the furnace – H3m x W3m x D3m </p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/forging/1.jpg"></div><div class="box"><img src="images/forging/2.jpg"></div><div class="box"><img src="images/forging/3.jpg"></div><div class="box"><img src="images/forging/4.png"></div><div class="box"><img src="images/forging/5.png"></div><div class="box"><img src="images/forging/6.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'heat-treatment'){
+            document.getElementById("details-header").innerHTML = "Heat Treatment";
+            let val = "";
+            val += '<p>Heat treatment is the process of heating metal without letting it reach its molten, or melting, stage, and then cooling the metal in a controlled way to select desired mechanical properties. Heat treatment is used to either make metal stronger or more malleable, more resistant to abrasion or more ductile</p><p>Our Heat treatment techniques include annealing, case hardening, precipitation strengthening, tempering, carburizing, normalizing, quenching ,Surface hardening and Volume Hardening</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/heat-treatment/1.png"></div><div class="box"><img src="images/heat-treatment/2.png"></div><div class="box"><img src="images/heat-treatment/3.jpg"></div><div class="box"><img src="images/heat-treatment/4.png"></div><div class="box"><img src="images/heat-treatment/5.png"></div><div class="box"><img src="images/heat-treatment/6.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'material-testing'){
+            document.getElementById("details-header").innerHTML = "Material Testing";
+            let val = "";
+            val += '<p>We are NABL Approved In house Lab facility with have a set of strict inspection criteria to guarantee the quality of Material. Our expertise in using Steel, Various grades of harden tempered forging material, Exotic Material Alloys, Tool steel like H13 & D2, Stavax, Alumax, and Non-Ferrous also, we are also supply of special components, sub-assemblies & S.P.M. (Special purpose machine/equipment) as per requirement of our customer.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/material-testing/1.jpg"></div><div class="box"><img src="images/material-testing/2.png"></div><div class="box"><img src="images/material-testing/3.png"></div><div class="box"><img src="images/material-testing/4.png"></div><div class="box"><img src="images/material-testing/5.png"></div><div class="box"><img src="images/material-testing/6.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'surface'){
+            document.getElementById("details-header").innerHTML = "Surface Preparation";
+            let val = "";
+            val += '<p>Find below our work related to Surface Preparation services.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/surface-preparation/1.png"></div><div class="box"><img src="images/surface-preparation/2.png"></div><div class="box"><img src="images/surface-preparation/3.png"></div><div class="box"><img src="images/surface-preparation/4.png"></div><div class="box"><img src="images/surface-preparation/5.png"></div><div class="box"><img src="images/surface-preparation/6.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'automation'){
+            document.getElementById("details-header").innerHTML = "Automation";
+            let val = "";
+            val += '<p>Find below our work related to automation services.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/automation/1.jpg"></div><div class="box"><img src="images/automation/2.JPG"></div><div class="box"><img src="images/automation/3.JPG"></div><div class="box"><img src="images/automation/4.JPG"></div><div class="box"><img src="images/automation/5.JPG"></div><div class="box"><img src="images/automation/6.JPG"></div><div class="box"><img src="images/automation/7.JPG"></div><div class="box"><img src="images/automation/8.JPG"></div><div class="box"><img src="images/automation/9.JPG"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'custom'){
+            document.getElementById("details-header").innerHTML = "Engineering & Custom Design Manufacturing";
+            let val = "";
+            val += '<p>Find below our work related to Engineering & Custom Design Manufacturing services.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/custom-design/1.JPG"></div><div class="box"><img src="images/custom-design/2.PNG"></div><div class="box"><img src="images/custom-design/3.JPG"></div><div class="box"><img src="images/custom-design/4.JPG"></div><div class="box"><img src="images/custom-design/5.JPG"></div><div class="box"><img src="images/custom-design/6.JPG"></div><div class="box"><img src="images/custom-design/7.JPG"></div><div class="box"><img src="images/custom-design/8.jpg"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'assembly'){
+            document.getElementById("details-header").innerHTML = "Assembly";
+            let val = "";
+            val += "<p>Essential qualities that our assemblers possess to perform their duties up to the manufacturing industry's standards. We have advanced technical skills to follow printed instructions and construct products accurately</p><p>We use verbal communication every day. Out team speak to coworkers and supervisors to convey instructions on how to piece together specific components. They also report issues so that their superiors can address them timely.</p><p>We perform tasks that are necessary to the production process. They aid in the fabrication, maintenance, and repair of component parts and products. We must also maintain tidy work areas and follow detailed instructions in order to meet safety and quality requirements.</p>";
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/assembly/1.png"></div><div class="box"><img src="images/assembly/2.JPG"></div><div class="box"><img src="images/assembly/3.png"></div><div class="box"><img src="images/assembly/4.png"></div><div class="box"><img src="images/assembly/5.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'fabrication'){
+            document.getElementById("details-header").innerHTML = "Heavy Fabrication";
+            let val = "";
+            val += '<p>Our Steel Fabrication division Provides thousand ton of top-quality structural steel projects work and machine building work.</p><p>All Our functional designs are built and with the highest quality materials and the best workman ship available in today’s market place.</p><p>STEELMECH TECH allows the out put of large structures under limited timeframes with top efficiency. We fabricate steel on our 6500 Sq M Located at Anand.</p><p>Our ability to build a machine structure as well as handling equipment’s and other kind of fabrication services.</p><p>Capacity to produce a single fabricated equipment 70 MT with highly modern plant which have a wide gas cutting (5m x 20m) and 80 MT overhead crane facility.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/fabrication/1.png"></div><div class="box"><img src="images/fabrication/2.png"></div><div class="box"><img src="images/fabrication/3.png"></div><div class="box"><img src="images/fabrication/4.png"></div><div class="box"><img src="images/fabrication/5.png"></div><div class="box"><img src="images/fabrication/6.png"></div><div class="box"><img src="images/fabrication/7.png"></div><div class="box"><img src="images/fabrication/8.png"></div><div class="box"><img src="images/fabrication/9.png"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+        if(title == 'machining'){
+            document.getElementById("details-header").innerHTML = "Precision Machining";
+            let val = "";
+            val += '<p>Our machining capabilities include a wide array of machines that allow for an efficient route to produce your products.</p><p>Our high-horsepower carbide and ceramic tooled machining centers allow maximum material removal in the rough-machining phase.</p><p>CNC turnings centers then allow for the most accurate details to be precision machined based on your needs.</p><p>Our experienced operators ensure accurate placement of bolt circles and tapped features. Our equipment is capable of turning pieces up to 56-inch diameter to handle your biggest jobs.</p><p>Additionally, we are able to meet standard tolerances and surface finish requirements. For finish-machining requirements,</p><p>skilled machinists use high precision tools and the latest equipment to maintain tight tolerances for critical dimensional requirements.</p>';
+            document.getElementById("description").innerHTML = val;
+            let products = "";
+            products += '<div class="box"><img src="images/machining/1.PNG"></div><div class="box"><img src="images/machining/2.jpg"></div><div class="box"><img src="images/machining/3.jpg"></div><div class="box"><img src="images/machining/4.jpg"></div><div class="box"><img src="images/machining/5.jpg"></div><div class="box"><img src="images/machining/6.jpg"></div><div class="box"><img src="images/machining/7.png"></div><div class="box"><img src="images/machining/8.png"></div><div class="box"><img src="images/machining/9.png"></div><div class="box"><img src="images/machining/10.png"></div><div class="box"><img src="images/machining/11.png"></div><div class="box"><img src="images/machining/12.png"></div><div class="box"><img src="images/machining/13.png"></div><div class="box"><img src="images/machining/14.png"></div><div class="box"><img src="images/machining/15.png"></div><div class="box"><img src="images/machining/16.png"></div><div class="box"><img src="images/machining/17.png"></div><div class="box"><img src="images/machining/18.png"></div><div class="box"><img src="images/machining/19.jpg"></div><div class="box"><img src="images/machining/20.jpg"></div>';
+            document.getElementById("products").innerHTML = products;
+        }
+    })
+</script>
+
+</html>
