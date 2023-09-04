@@ -120,7 +120,7 @@ h6{
     line-height: 22px;
 }
 .name {
-    font-size: 50px !important;
+    font-size: 40px !important;
     font-weight: 900;
     line-height: 60px;
     text-shadow: 0px 2px, 2px 0px, 2px 2px;
@@ -175,7 +175,7 @@ h6{
         bottom: 2%;
     }
     .name {
-        font-size: 40px !important;
+        font-size: 30px !important;
         line-height: 50px;
     }
 }
@@ -1074,7 +1074,7 @@ textarea.form-control{
 
 @media screen and (max-width: 800px){
     .name {
-        font-size: 35px !important;
+        font-size: 25px !important;
         line-height: 50px;
     }
     hr {
