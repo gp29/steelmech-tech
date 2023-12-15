@@ -1153,6 +1153,35 @@ sub, sup {
   overflow: visible;
 }
 
+#fade2 {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light2 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  max-height: 360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  border: 2px solid #FFF;
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
 #boxclose {
   float: right;
   cursor: pointer;
@@ -1177,6 +1206,10 @@ sub, sup {
 }
 
 #fade:hover ~ #boxclose {
+  display:none;
+}
+
+#fade2:hover ~ #boxclose {
   display:none;
 }
 

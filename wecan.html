@@ -73,6 +73,22 @@
         </div>
     </div>
 
+    <div id="light2">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close2();"></a>
+        <video id="VisaChipCardVideo2" width="600" controls>
+            <source src="images/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="fade2" onClick="lightbox_close2();"></div>
+    <div class="container">
+        <div class="video-one__box" style="background-image: url(images/video-bg-1-1.jpg);">
+            <div class="video-one__content">
+                <a href="javascript:void(0)" class="video-popup" onclick="lightbox_open2();"><img src="images/play-button.png" class="fa fa-play" style="width: 100%;" /></a>
+                <h3>Watch Our Video</h3>
+            </div>
+        </div>
+    </div>
+
     <div class="our-partners-main">
         <h1>Our Products</h1>
         <hr class="heding-line">
@@ -261,6 +277,18 @@
                 <img class="wecan-img" src="images/wecan/Walking bearm.png">
                 <p style="color: black;">Walking bearm</p>
             </div>
+            <div class="box">
+                <img class="wecan-img" src="images/wecan/Coil Opener.jpeg">
+                <p style="color: black;">Coil Opener</p>
+            </div>
+            <div class="box">
+                <img class="wecan-img" src="images/wecan/Edge prebending machine.jpeg">
+                <p style="color: black;">Edge prebending machine</p>
+            </div>
+            <div class="box">
+                <img class="wecan-img" src="images/wecan/Edge prebending machine2.jpeg">
+                <p style="color: black;">Edge prebending machine</p>
+            </div>
         </div>
     </div>
     <!-- <div class="privacy-cookies">Privacy Policy</div> -->
@@ -304,6 +332,21 @@
             document.getElementById('light').style.display = 'none';
             document.getElementById('fade').style.display = 'none';
             lightBoxVideo.pause();
+        }
+
+        function lightbox_open2() {
+            var lightBoxVideo2 = document.getElementById("VisaChipCardVideo2");
+            window.scrollTo(0, 0);
+            document.getElementById('light2').style.display = 'block';
+            document.getElementById('fade2').style.display = 'block';
+            lightBoxVideo2.play();
+        }
+
+        function lightbox_close2() {
+            var lightBoxVideo2 = document.getElementById("VisaChipCardVideo2");
+            document.getElementById('light2').style.display = 'none';
+            document.getElementById('fade2').style.display = 'none';
+            lightBoxVideo2.pause();
         }
     </script>
 </body>
